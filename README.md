@@ -20,13 +20,3 @@ The purpose if this webpack starter is to allow people to create websites withou
 - Yarn instead NPM
 - PostCSS
 
-## Contributions
-
-You can contribute directly to this repository or create a fork and peform your own modifications, feel free to use it in the way you want!
-
-## Donations
-
-You can of course help a little bit with some donation to buy more coffee :)
-
-<a href="https://www.buymeacoffee.com/edgardo" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
-# Project-21-investors
