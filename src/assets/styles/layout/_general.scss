@@ -1,0 +1,181 @@
+/* src/assets/styles/layout/_general.scss  */
+
+// GENERAL
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  // outline: none;
+}
+
+html {
+  font-size: 1rem;
+  font-family: $font-primary;
+}
+
+html, a {
+  color: $grey-dark;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+// SECTIONS
+
+main {
+  width: 100%;
+  height: auto;
+  transition: all .3s ease;
+  
+  @include from(5) {
+    width: calc(100% - #{$aside});
+    float: right;
+  }
+  // @include respond(laptop) {
+  //   width: calc(100% - #{$aside});
+  //   float: right;
+  // }
+}
+
+section {
+  @include full-width();
+  height: auto;
+  
+  // & > {
+  //   margin: auto;
+  // }
+}
+
+.container {
+  width: $container;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include at(2) {
+    width: 92%;
+  }
+  @include at(3) {
+    width: 90%;
+  }
+  @include at(4) {
+    width: 87%;
+  }
+  @include at(5) {
+    width: 83%;
+  }
+}
+
+// OTHER
+
+p {
+  margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+
+// TYPOGRPHY
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    color: darken($grey-dark, 40%);
+    text-decoration: solid;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 2.2rem;
+  
+  @include from(2) {
+    // right: -4rem;
+    font-size: 3rem;
+  }
+  @include from(4) {
+    font-size: 3.6rem;
+  }
+  // @include respond(tab-port) {
+  //   font-size: 3rem;
+  // }
+
+  // @include respond(big-desktop) {
+  //   font-size: 3.6rem;
+  // }
+}
+
+h2 {
+  font-size: 1.9rem;
+
+  @include from(2) {
+    // right: -4rem;
+    font-size: 2.6rem;
+  }
+  @include from(4) {
+    font-size: 3.1rem;
+  }
+
+  // @include respond(tab-port) {
+  //   font-size: 2.6rem;
+  // }
+
+  // @include respond(big-desktop) {
+  //   font-size: 3.1rem;
+  // }
+}
+
+h3 {
+  font-size: 1.2rem;
+
+  @include from(2) {
+    font-size: 1.4rem;
+  }
+  @include from(4) {
+    font-size: 1.7rem;
+  }
+
+  // @include respond(tab-port) {
+  //   font-size: 2.1rem;
+  // }
+
+  // @include respond(big-desktop) {
+  //   font-size: 2.4rem;
+  // }
+}
+
+// .fas {
+//   position: relative;
+//   color: #red;
+//   font-size: 16px;
+// }
+// .fas:before {
+//   position: absolute;
+//   left: calc(50% - .5em);
+//   top: calc(50% - .5em);
+// }
+// .fas.fa-icon {
+//   width: 60px;
+//   height: 60px;
+//   color: blue;
+//   background-color: black;
+// }
+
+.kolor-niebieski {
+  color: $blue-light;
+}
+
+.title-link {
+  font-weight: bold;
+}

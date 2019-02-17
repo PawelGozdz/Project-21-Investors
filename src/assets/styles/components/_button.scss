@@ -1,0 +1,80 @@
+/* src/assets/styles/components/_button.scss  */
+
+.button {
+  background-color: $grey-light;
+  position: relative;
+  display: inline-block;
+  // width: 3rem;
+  // height: 3rem;
+  transition: all .3s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+  
+  &__circle {
+    border-radius: 50%;
+    width: 6rem;
+    height: 6rem;
+    // position: absolute;
+    // bottom: 0;
+    // left: 0;
+    box-shadow: 2px 2px 6px 2px $grey-dark;
+    z-index: 999;
+    // transform: translate(-50%, -50%);
+
+    // @include from(3) {
+    //   width: 7rem;
+    //   height: 7rem;
+    // }
+    &:hover {
+      box-shadow: 2px 2px 8px 2px $grey-dark;
+    z-index: 999;
+    }
+
+    // @include respond(tab-land) {
+    //   width: 7rem;
+    //   height: 7rem;
+    // }
+
+    // &::before,
+    // &::after {
+    //   content: '';
+    //   width: 4rem;
+    //   height: 2rem;
+    //   background: blue;
+    // }
+
+  }
+
+  &__action {
+    padding: .5rem 1rem;
+    color: $white;
+    background-image: linear-gradient(90deg, $blue-light, $blue-dark);
+    box-shadow: 2px 2px 6px 1px $grey-dark;
+    
+
+    &:hover {
+      box-shadow: 2px 2px 12px 1px $grey-dark;
+      color: $grey-light;
+    }
+  }
+
+  &__goto {
+    padding: .25rem .5rem;
+    font-size: .8rem;
+    background-image: linear-gradient(90deg, $blue-light, $blue-dark);
+    color: white;
+    box-shadow: 2px 2px 6px 1px $grey-dark;
+
+    &:hover {
+      box-shadow: 2px 2px 12px 1px $grey-dark;
+      color: $grey-light;
+    }
+  }
+}
+
+/* $class outputs the selector, do not place mixin within a rule
+   $dir == up, down, left or right,
+   $bg == background-color of arrow container 
+*/ 

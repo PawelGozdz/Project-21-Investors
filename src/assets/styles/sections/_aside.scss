@@ -1,0 +1,154 @@
+
+.aside {
+  background-color: $grey-light;
+  display: flex;
+  flex-direction: column;
+  width: calc(#{$aside} * .85);
+  height: 100%;
+  position: fixed;
+  left: 0;
+  z-index: 10000;
+  
+  text-align: center;
+  color: $grey-dark;
+  padding: 1.6rem;
+  font-size: .85rem;
+  padding-top: 3rem;
+  transform: translateX(-#{$aside});
+  transition: all .3s ease;
+
+  // @include respond(tab-port) {
+  //   width: $aside;
+  // }
+  @include at(1) {
+    width: $aside;
+  }
+  @include from(5) {
+    width: $aside;
+  }
+
+  // @include respond(laptop) {
+  //   transform: translateX(0);
+  // }
+  @include from(5) {
+    transform: translateX(0);
+  }
+
+  &.open {
+    transform: translateX(0);
+  }
+
+  &__logo {
+    
+    img {
+      width: 100%;
+    }
+  }
+
+  &__navigation {
+    margin-top: 4rem;
+  }
+
+  &__item {
+    margin-bottom: 1.8rem;
+  
+    p {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__link {
+    display: block;
+
+    &:hover {
+      // color: darken($grey-dark, 25%);
+    }
+  }
+
+  &__footer {
+    margin-top: auto;
+  }
+
+  &__social-list {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__social-item:not(:last-child) {
+    margin-right: 1rem;
+  }
+
+  &__created {
+    margin-top: 3rem;
+    font-size: .65rem;
+    
+    a {
+      color: $grey-dark;
+    }
+  }
+
+  // HAMBURGER MENU
+
+  &__hamburger {
+    position: absolute;
+    top: 1rem;
+    right: -5.5rem;
+    display: inline-block;
+    cursor: pointer;
+    z-index: 1000;
+    
+    @include from(1) {
+      right: -4rem;
+    }
+    @include at(2) {
+      right: -6rem;
+    }
+    @include at(3) {
+      right: -7rem;
+    }
+    @include at(4) {
+      right: -9rem;
+    }
+    @include from(5) {
+      display: none;
+    }
+    // @include respond(tab-port) {
+    //   right: -4rem;
+    // }
+    // @include respond(laptop) {
+    //   display: none;
+    // }
+
+    &.open {
+      right: -3rem;
+    }
+  }
+  
+  &__hamburger1, &__hamburger2, &__hamburger3 {
+    width: 35px;
+    height: 5px;
+    background-color: $grey-dark;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  .change &__hamburger1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+  
+  .change &__hamburger2 {opacity: 0;}
+  
+  .change &__hamburger3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+}
+
+.active {
+  background-color: red;
+}
+.actives {
+  background-color: purple;
+}

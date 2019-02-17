@@ -1,0 +1,36 @@
+.footer {
+  background: $grey-dark;
+  color: $grey-light;
+  padding: 2rem 0;
+  
+  a {
+    color: $grey-light;
+  }
+
+  .content {
+    @include container();
+  }
+
+  &__boxes {
+    @include clearfix;
+  }
+
+  &__box {
+
+    @include at(2) {
+      @include column(4/12);
+    }
+    @include from(3) {
+      @include column(3/12);
+    }
+  }
+
+  h3 {
+    margin-bottom: 2rem;
+  }
+
+  ul li {
+    font-size: .8rem;
+    margin-top: .5rem;
+  }
+}

@@ -1,0 +1,52 @@
+$blue-dark: #21629c;
+$blue-light: #1fa8b8;
+$blue-gradient: linear-gradient($blue-light, $blue-dark);
+
+$white: #fff;
+$black: #000;
+$grey-light: #f3f3f3;
+$grey-medium: #d6d6d6;
+$grey-dark: #4b4b4bd2;
+
+// FONTS
+
+$quicksand: 'Quicksand', sans-serif;
+$font-primary: 'Montserrat',Arial, sans-serif;
+$font-secondary: 'Poppins',Arial, sans-serif;
+
+// WIDTS
+
+$aside: 18.5rem;
+$container: 95%;
+
+// GRID
+
+// $slicer-breakpoints: 0 400px 600px 800px 1010px !default
+$slicer-breakpoints: 0 36em 48em 65em 90em !default;
+$slicer-breakpoint-names: () !default;
+$slicer-anti-overlap-corrections: 1px !default;
+
+  // $phone: 0;
+  // $tab-port: 36em;
+  // $tab-land: 48em;
+  // $laptop: 65em;
+  // $big-desktop: 75em;
+
+
+// TYPOGRAPHY
+
+h1 {
+  font-family: $font-secondary;
+  // font-size: 4rem;
+  font-weight: 300;
+}
+
+h2 {
+  // font-size: 3rem;
+  font-weight: 300;
+}
+
+h3 {
+  // font-size: 2.8rem;
+  font-weight: 300;
+}

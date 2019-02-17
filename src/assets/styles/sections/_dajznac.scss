@@ -1,0 +1,25 @@
+.dajznac {
+  background-image: linear-gradient(90deg, lighten($blue-light, 40%), lighten($blue-dark, 30%));
+  padding: 4rem 0;
+  
+  .content {
+    @include container();
+  }
+
+  &__header {
+    @include from(2) {
+      @include column(3/4);
+    }
+  }
+
+  &__action {
+    margin-top: 2rem;
+    
+    @include from(2) {
+      margin-top: 0;
+      @include column(1/4);
+    }
+  }
+
+  @include clearfix;
+}

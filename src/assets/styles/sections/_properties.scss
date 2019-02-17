@@ -1,0 +1,54 @@
+.properties {
+  color: $white;
+  background-image: linear-gradient(90deg, lighten($blue-light, 40%), lighten($blue-dark, 30%));
+  padding: 2rem 0;
+
+  .content {
+    @include container();
+    height: auto;
+    @include clearfix;
+  }
+
+  &__img {
+    @include from(3) {
+      @include column(1/4);
+    }
+
+    img {
+      width: 100%;
+    }
+    
+    p {
+      color: $grey-dark;
+      margin-top: 1rem;
+    }
+  }
+  
+  &__asari {
+    @include from(3) {
+      @include column(3/4);
+    }
+  }
+
+  &__image {
+    @include span(1/5);
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__buttons {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    @include from(3) {
+      margin-bottom: 0;
+    }
+
+    .button__goto:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+}
