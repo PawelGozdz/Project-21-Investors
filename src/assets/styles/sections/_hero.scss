@@ -1,14 +1,35 @@
 .hero {
   height: auto;
   background-repeat: no-repeat;
-  background-position: right top;
+  background-position: center center;
+  background-position: cover;
   
-  @include from(5) {
-    background-position: cover;
-  }
+  // @include from(5) {
+  //   background-position: cover;
+  // }
   
   &--index {
-    background-image: url('../images/tło-index.png');
+    background-image:  linear-gradient(90deg, lighten($grey-dark, 65%), rgba($grey-light, .5)), url('../images/mieszkanie-białe-male.jpg');
+    
+    @include from(3) {
+      background-image:  linear-gradient(90deg, lighten($grey-dark, 65%), rgba($grey-light, .5)), url('../images/mieszkanie-białe-duze.jpg');
+    }
+  }
+
+  &--doradcy {
+    background-image:  linear-gradient(90deg, lighten($grey-dark, 70%), rgba($grey-light, .95)), url('../images/doradztwo-male.jpg');
+    
+    @include from(3) {
+      background-image:  linear-gradient(90deg, lighten($grey-dark, 70%), rgba($grey-light, .95)), url('../images/doradztwo-duze.jpg');
+    }
+  }
+
+  &--o-nas {
+    background-image:  linear-gradient(90deg, lighten($grey-dark, 70%), rgba($grey-light, .95)), url('../images/zespol-male.jpg');
+    
+    @include from(3) {
+      background-image:  linear-gradient(90deg, lighten($grey-dark, 70%), rgba($grey-light, .95)), url('../images/zespol-duzy.jpg');
+    }
   }
 
   .content {
@@ -21,10 +42,10 @@
     }
   }
 
-  h1, h3 {
-    color: $grey-medium;
+  h1 {
+    color: $blue-light;
   }
-
+  
   h1 {
     margin-top: 9rem;
     margin-bottom: 1rem;  
@@ -32,6 +53,7 @@
   
   & h3 {
     margin-bottom: 4rem;
+    color: $grey-dark;
   }
 
   & .content > div {

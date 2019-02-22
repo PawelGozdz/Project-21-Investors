@@ -1,0 +1,45 @@
+extends ../layouts/master.pug
+
+block title
+  title P.J. Investors - O Nas
+//- block manifestBrowserconfigFiles
+  //- link(href='../manifest.json', rel='manifest')
+  //- meta(name='msapplication-config' content='../browserconfig.xml')
+
+block content
+  //- navigation START
+    - var active = "index"
+  //- - var page = "index"
+  include ../components/aside.pug
+      //- block navigation
+
+  //- main
+  main
+    //- p abc
+    section.hero.hero--o-nas
+      .content
+        h1 O Firmie P.J. Investors LTD 
+        //- h3 Biuro nieruchomości - Warszawa
+        //- h1 Biuro nieruchomości#[br]w Warszawie
+        h3 Poznaj naszych specjalistów
+        div
+          a(href="#o-nas").button.button__circle.centre-icon
+            i.fas.fa-angle-double-down
+    
+    //- Uslugi
+    include ../components/onas-1.pug
+
+    //- CTA - properties
+    include ../components/properties.pug
+
+    //- Zespół
+    include ../components/onas-2.pug
+
+    //- Footer
+    include ../components/footer.pug
+
+
+
+
+  
+    

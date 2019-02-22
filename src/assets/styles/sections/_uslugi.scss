@@ -20,7 +20,6 @@
   }
 
   .content {
-    // padding: 2rem;
     @include container();
     text-align: left;
     color: lighten($grey-dark, 20%);
@@ -32,25 +31,12 @@
       color: $blue-dark;
       display: inline-block;
     }
-
-    ;
   }
 
   &__box {
-    @include at(3) {
-      // @include column(1/2);
-    }
     height: auto;
 
     @include clearfix;
-
-    // @include from(4) {
-    //   @include column(1/3);
-    // }
-
-    // @include from(5) {
-    //   @include column(1/4);
-    // }
 
     &:not(:last-child) {
       margin-bottom: 4rem;
@@ -94,8 +80,6 @@
       height: auto;
     }
   }
-
-  
 
   i {
     font-size: 3rem;

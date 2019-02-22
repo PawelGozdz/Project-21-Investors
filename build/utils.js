@@ -11,18 +11,26 @@ exports.pages = function (env, folder = '') {
     if (view.split('.')[1] === undefined)
       return false;
 
+      // console.log(view);
+
     const viewName = view.split('.')[0];
+
+    // console.log('viewname: ', viewName);
     const fileName = folder === '' ? `${viewName}/index.html` : `${folder}/${viewName}/index.html`;
+
+    // console.log('filename: ', fileName);
     const options = {
       filename: fileName,
       template: `views/${rootPagesFolderName}/${folder}/${view}`,
       inject: true
     };
 
+    // console.log('options', options);
+
     if (env === 'development') {
       options.minify = {
         removeComments: true,
-        collapseWhitespace: true,
+        // collapseWhitespace: true,
         removeAttributeQuotes: true
       };
     }
@@ -30,5 +38,6 @@ exports.pages = function (env, folder = '') {
     pages.push(new HtmlWebpackPlugin(options));
   })
 
+  console.log('pages: ', pages);
   return pages;
 }

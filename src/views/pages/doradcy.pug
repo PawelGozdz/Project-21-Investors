@@ -1,0 +1,56 @@
+extends ../layouts/master.pug
+
+block basicSeo
+  meta(name='description' content='Doradcy page')
+  meta(name='keywords', content='doradcy, page')
+  meta(name='author' content='abc')
+
+block title
+  title Biuro nieruchomoci - doradztwo
+//- block manifestBrowserconfigFiles
+  //- link(href='../manifest.json', rel='manifest')
+  //- meta(name='msapplication-config' content='../browserconfig.xml')
+
+block content
+  //- navigation START
+    - var active = "index"
+  //- - var page = "index"
+  include ../components/aside.pug
+      //- block navigation
+
+  //- main
+  main
+    //- p abc
+    section.hero.hero--doradcy
+      .content
+        h1 Doradztwo ws. nieruchomości#[br]P.J. Investors LTD 
+        //- h3 Biuro nieruchomości - Warszawa
+        //- h1 Biuro nieruchomości#[br]w Warszawie
+        h3 Wycena, doradztwo techniczne
+        div
+          a(href="#daradztwo").button.button__circle.centre-icon
+            i.fas.fa-angle-double-down
+
+    //- Doradcy 1
+    include ../components/doradcy-1.pug
+    
+    //- CTA - properties
+    include ../components/properties.pug
+
+    //- Doradcy 2
+    include ../components/doradcy-2.pug
+
+    //- CTA - dajznac
+    include ../components/dajznac.pug
+
+    //- Doradcy 3
+    include ../components/doradcy-3.pug
+
+    //- Footer
+    include ../components/footer.pug
+
+
+
+
+  
+    

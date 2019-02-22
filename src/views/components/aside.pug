@@ -6,33 +6,33 @@ aside.aside
     .aside__hamburger2
     .aside__hamburger3
   .aside__logo
-    a(href="#")
+    a(href="/")
       img(src="./assets/images/logo.png", title="P.J. Investors", alt="Logo P. J. Investors").aside__img
   nav.aside__navigation
     ul.aside__list
       li.aside__item
-        a(href="/").aside__link Strona Główna
+        a(href="/", class=(page == "index" ? "active" : "")).aside__link Strona Główna
       li.aside__item
-        a(href="/sprzedaj").aside__link Sprzedaj z Nami
+        a(href="/sprzedaj-z-nami").aside__link Sprzedaj z Nami
       li.aside__item
-        a(href="/daradcy").aside__link Doradcy
+        a(href="/doradcy").aside__link Doradcy
       li.aside__item
-        a(href="/onas").aside__link O Nas
+        a(href="/o-nas").aside__link O Nas
       li.aside__item
         a(href="/kontakt").aside__link Kontakt
       li.aside__item
         p Zajrzyj na #[a(href="https://pjinvestors.otodom.pl/", target="_blank").title-link otodom.pl] lub #[a(href="https://www.morizon.pl/biuro-nieruchomosci/p-j-investors-46909", target="_blank").title-link mozizon.pl], gdzie jest pełna lista naszych nieruchomości
         .proprerties__container
           .properties__image
-            img(src="./assets/images/nieruchomosc-1-mala.jpg", title="Mieszkanie na sprzedaż" alt="Mieszkanie na sprzedaż")
+            img(src="./assets/images/nieruchomosc-1-mala.jpg", title="Sprawdź nasze mieszkania" alt="Mieszkania w ofercie")
           .properties__image
-            img(src="./assets/images/nieruchomosc-2-mala.jpg", title="Mieszkanie na sprzedaż" alt="Mieszkanie na sprzedaż")
+            img(src="./assets/images/nieruchomosc-2-mala.jpg", title="Sprawdź nasze mieszkania" alt="Sprawdź nasze nieruchomości")
           .properties__image
-            img(src="./assets/images/nieruchomosc-3-mala.jpg", title="Mieszkanie na sprzedaż" alt="Mieszkanie na sprzedaż")
+            img(src="./assets/images/nieruchomosc-3-mala.jpg", title="Sprawdź nasze mieszkania" alt="Pełna oferta na Otodom lub Morizon")
           .properties__image
-            img(src="./assets/images/nieruchomosc-4-mala.jpg", title="Mieszkanie na sprzedaż" alt="Mieszkanie na sprzedaż")
+            img(src="./assets/images/nieruchomosc-4-mala.jpg", title="Sprawdź nasze mieszkania" alt="Zdjęcia nieruchomości")
           .properties__image
-            img(src="./assets/images/nieruchomosc-5-mala.jpg", title="Mieszkanie na sprzedaż" alt="Mieszkanie na sprzedaż")
+            img(src="./assets/images/nieruchomosc-5-mala.jpg", title="Sprawdź nasze mieszkania" alt="Zdjęcia mieszkań na sprzedaż")
   .properties__buttons
     a(href="https://pjinvestors.otodom.pl/", target="_blank").button.button__goto Otodom
     a(href="https://www.morizon.pl/biuro-nieruchomosci/p-j-investors-46909", target="_blank").button.button__goto Morizon
@@ -45,5 +45,5 @@ aside.aside
           i.fab.fa-facebook-f
 
     p.aside__created
-      a(href="http://rwd-stronyinternetowe.pl", target="_blank") Stworzone przez 
+      a(href="http://rwd-stronyinternetowe.pl", target="_blank") Stworzone przez #[br]
         span rwd-stronyinternetowe.pl

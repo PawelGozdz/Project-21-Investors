@@ -13,9 +13,10 @@
   color: $grey-dark;
   padding: 1.6rem;
   font-size: .85rem;
-  padding-top: 3rem;
+  padding-top: 2rem;
   transform: translateX(-#{$aside});
   transition: all .3s ease;
+  box-shadow: 2px 2px 1px $grey-medium;
 
   // @include respond(tab-port) {
   //   width: $aside;
@@ -46,7 +47,7 @@
   }
 
   &__navigation {
-    margin-top: 4rem;
+    margin-top: 3rem;
   }
 
   &__item {
@@ -80,11 +81,15 @@
   }
 
   &__created {
-    margin-top: 3rem;
+    margin-top: 2.7rem;
     font-size: .65rem;
     
     a {
       color: $grey-dark;
+    }
+
+    span {
+      color: $blue-light;
     }
   }
 
