@@ -1,0 +1,111 @@
+.sprzedaj {
+  margin-top: 2rem;
+  padding-bottom: 4rem;
+  line-height: 1.7;
+
+  @include from(3) {
+    margin-top: 3rem;
+  }
+
+  h2 {
+    margin-bottom: 3rem;
+
+    @include from(3) {
+      margin-bottom: 4rem;
+    }
+
+    @include from(5) {
+      margin-bottom: 5.5rem;
+    }
+  }
+
+  &__opis {
+    margin-bottom: 1rem;
+  }
+
+  .content {
+    @include container();
+    text-align: left;
+    color: lighten($grey-dark, 20%);
+  }
+
+  @include to(2) {
+    p {
+      text-align: justify;
+    }
+  }
+  
+  &__boxes {
+    
+    h3 {
+      color: $blue-dark;
+      display: inline-block;
+    }
+    @include clearfix;
+  }
+
+  &__box {
+    padding: .5rem;
+  }
+
+  &__divider {
+    display: block;
+    text-align: center;
+    width: 4rem;
+    margin: 1rem 0;
+    height: 1px;
+    background-color: $grey-medium;
+  }
+
+  i {
+    font-size: 3rem;
+    color: $blue-light;
+    text-shadow: 2px 2px 2px $grey-medium;
+    margin-right: 1rem;
+
+
+    &:hover {
+      color: lighten($blue-light, 10%);
+    }
+  }
+
+  input, label, textarea {
+    display: block;
+    width: 100%;
+    border: 0;
+    
+  }
+
+  &__form {
+    @include column();
+    
+    @include from(4) {
+      @include column(1/2);
+
+    }
+  }
+  
+  form {
+    margin-top: 3rem;
+
+    input {
+      height: 2rem;
+    }
+
+    input, textarea {
+      margin-bottom: 2rem;
+      border-bottom: 1px solid $grey-medium;
+    }
+    
+    label { 
+      margin-bottom: 1rem;
+    }
+
+  }
+
+  footer &__opis {
+    font-weight: bold;
+
+    @include column();
+  }
+}

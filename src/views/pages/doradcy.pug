@@ -7,25 +7,16 @@ block basicSeo
 
 block title
   title Biuro nieruchomoci - doradztwo
-//- block manifestBrowserconfigFiles
-  //- link(href='../manifest.json', rel='manifest')
-  //- meta(name='msapplication-config' content='../browserconfig.xml')
 
 block content
-  //- navigation START
-    - var active = "index"
-  //- - var page = "index"
+  //- block navigation
   include ../components/aside.pug
-      //- block navigation
 
   //- main
   main
-    //- p abc
-    section.hero.hero--doradcy
+    section#hero.hero.hero--doradcy
       .content
-        h1 Doradztwo ws. nieruchomości#[br]P.J. Investors LTD 
-        //- h3 Biuro nieruchomości - Warszawa
-        //- h1 Biuro nieruchomości#[br]w Warszawie
+        h1 Doradztwo ws. nieruchomości#[br]P.J. Investors LTD
         h3 Wycena, doradztwo techniczne
         div
           a(href="#daradztwo").button.button__circle.centre-icon

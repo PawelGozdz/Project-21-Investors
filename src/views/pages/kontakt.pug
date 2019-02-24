@@ -1,0 +1,30 @@
+extends ../layouts/master.pug
+
+block title
+  title P.J. Investors - Kontakt
+
+block content
+  //- navigation START
+  include ../components/aside.pug
+
+  //- main
+  main
+    section#hero.hero.hero--kontakt
+      .content
+        h1 P.J. Investors LTD - Kontakt
+        h3 Biuro nieruchomości
+        div
+          a(href="#kontakt").button.button__circle.centre-icon
+            i.fas.fa-angle-double-down
+    
+    //- Kontakt
+    include ../components/kontakt-1.pug
+
+    //- Footer
+    include ../components/footer.pug
+
+
+
+
+  
+    

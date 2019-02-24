@@ -1,0 +1,86 @@
+.kontakt {
+  margin: 2rem 0;
+  padding-bottom: 4rem;
+  line-height: 1.7;
+  padding: 1rem;
+
+  @include from(3) {
+    margin-top: 3rem;
+  }
+
+  h2 {
+    margin-bottom: 3rem;
+
+    @include from(3) {
+      margin-bottom: 4rem;
+    }
+
+    @include from(5) {
+      margin-bottom: 5.5rem;
+    }
+  }
+
+  .content {
+    @include container();
+    text-align: left;
+    color: lighten($grey-dark, 20%);
+  }
+  
+  &__boxes {
+    
+    h3 {
+      color: $blue-dark;
+    }
+  }
+
+  &__box {
+    height: auto;
+    @include clearfix;
+  }
+
+  &__desc {
+    @include column();
+    margin-bottom: 2rem;
+    
+    @include from(3) {
+      margin-bottom: 0;
+      @include column(5/12);
+    }
+  }
+  
+  li {
+    margin-bottom: 2rem;
+    i {
+      font-size: 2rem;
+      display: inline-block;
+      color: $blue-light;
+      text-shadow: 2px 2px 2px $grey-medium;
+      margin-right: 1rem;
+
+      &:hover {
+        color: lighten($blue-light, 10%);
+      }
+    }
+
+    p {
+      display: inline-block;
+    }
+  }
+
+  
+  &__mapa {
+    @include from(3) {
+      @include column(7/12);
+    }
+
+    & > iframe {
+      width: 100%;
+      height: auto;
+      min-height: 17.5rem;
+    }
+  }
+
+  footer &__opis {
+    font-weight: bold;
+  }
+}

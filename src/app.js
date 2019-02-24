@@ -18,6 +18,6 @@ $(document).ready(() => {
     $(".aside__hamburger").removeClass("open");
   });
 
-  const abc = ['abc', 'cde', 'efd'];
   require('scripts/demo');
+  require('scripts/animations');
 });

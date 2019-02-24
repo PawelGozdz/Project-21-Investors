@@ -4,7 +4,6 @@
 
 *, *::before, *::after {
   box-sizing: border-box;
-  // outline: none;
 }
 
 html {
@@ -33,19 +32,11 @@ main {
     width: calc(100% - #{$aside});
     float: right;
   }
-  // @include respond(laptop) {
-  //   width: calc(100% - #{$aside});
-  //   float: right;
-  // }
 }
 
 section {
   @include full-width();
   height: auto;
-  
-  // & > {
-  //   margin: auto;
-  // }
 }
 
 .container {
@@ -92,6 +83,24 @@ a {
   }
 }
 
+button {
+  border: 0;
+}
+
+input, textarea {
+  border: 0;
+}
+
+input:active,
+input:target,
+input:focus,
+textarea:active,
+textarea:target,
+textarea:focus,
+ {
+  outline-color: $blue-light;
+}
+
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-weight: 300;
@@ -101,39 +110,22 @@ h1 {
   font-size: 2.2rem;
   
   @include from(2) {
-    // right: -4rem;
     font-size: 3rem;
   }
   @include from(4) {
     font-size: 3.6rem;
   }
-  // @include respond(tab-port) {
-  //   font-size: 3rem;
-  // }
-
-  // @include respond(big-desktop) {
-  //   font-size: 3.6rem;
-  // }
 }
 
 h2 {
   font-size: 1.9rem;
 
   @include from(2) {
-    // right: -4rem;
     font-size: 2.6rem;
   }
   @include from(4) {
     font-size: 3.1rem;
   }
-
-  // @include respond(tab-port) {
-  //   font-size: 2.6rem;
-  // }
-
-  // @include respond(big-desktop) {
-  //   font-size: 3.1rem;
-  // }
 }
 
 h3 {
@@ -145,32 +137,7 @@ h3 {
   @include from(4) {
     font-size: 1.7rem;
   }
-
-  // @include respond(tab-port) {
-  //   font-size: 2.1rem;
-  // }
-
-  // @include respond(big-desktop) {
-  //   font-size: 2.4rem;
-  // }
 }
-
-// .fas {
-//   position: relative;
-//   color: #red;
-//   font-size: 16px;
-// }
-// .fas:before {
-//   position: absolute;
-//   left: calc(50% - .5em);
-//   top: calc(50% - .5em);
-// }
-// .fas.fa-icon {
-//   width: 60px;
-//   height: 60px;
-//   color: blue;
-//   background-color: black;
-// }
 
 .kolor-niebieski {
   color: $blue-light;
@@ -178,4 +145,8 @@ h3 {
 
 .title-link {
   font-weight: bold;
+}
+
+.hideme {
+  opacity: 1;
 }

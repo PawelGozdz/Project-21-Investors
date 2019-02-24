@@ -2,38 +2,31 @@ extends ../layouts/master.pug
 
 block title
   title Sprzedaj mieszkanie z nami
-//- block manifestBrowserconfigFiles
-  //- link(href='../manifest.json', rel='manifest')
-  //- meta(name='msapplication-config' content='../browserconfig.xml')
 
 block content
   //- navigation START
-    - var active = "index"
-  //- - var page = 'index'
   include ../components/aside.pug
-      //- block navigation
 
   //- main
   main
     //- p abc
-    section.hero.hero--index
+    section#hero.hero.hero--sprzedaj
       .content
-        h1 Biuro nieruchomości #[br]P.J. Investors LTD 
-        //- h3 Biuro nieruchomości - Warszawa
-        //- h1 Biuro nieruchomości#[br]w Warszawie
+        h1 Sprzedaj z Nami
         h3 Sprzedaż mieszkań, kupno mieszkań
         div
-          a(href="#uslugi").button.button__circle.centre-icon
+          a(href="#sprzedaj").button.button__circle.centre-icon
             i.fas.fa-angle-double-down
+
     
+    //- Sprzedaj 1
+    include ../components/sprzedaj-1.pug
 
     //- CTA - properties
     include ../components/properties.pug
 
-
-    //- CTA - dajznac
-    include ../components/dajznac.pug
-
+    //- Sprzedaj 2
+    include ../components/sprzedaj-2.pug
 
     //- Footer
     include ../components/footer.pug

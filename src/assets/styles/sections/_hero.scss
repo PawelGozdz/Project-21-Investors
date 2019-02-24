@@ -32,6 +32,23 @@
     }
   }
 
+  &--kontakt {
+    min-height: 30rem;
+    background-image:  linear-gradient(90deg, lighten($grey-dark, 70%), rgba($grey-light, .95)), url('../images/miasto-z-gory-male.jpg');
+    
+    @include from(3) {
+      background-image:  linear-gradient(90deg, lighten($grey-dark, 70%), rgba($grey-light, .95)), url('../images/miasto-z-gory-duze.jpg');
+    }
+  }
+
+  &--sprzedaj {
+    background-image:  linear-gradient(90deg, lighten($grey-dark, 70%), rgba($grey-light, .95)), url('../images/skrzynka-mala.jpg');
+    
+    @include from(3) {
+      background-image:  linear-gradient(90deg, lighten($grey-dark, 70%), rgba($grey-light, .95)), url('../images/skrzynka-duza.jpg');
+    }
+  }
+
   .content {
     height: auto;
     padding: 1rem;
