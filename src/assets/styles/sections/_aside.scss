@@ -13,24 +13,17 @@
   color: $grey-dark;
   padding: 1.6rem;
   font-size: .85rem;
-  padding-top: 2rem;
+  padding-top: 1rem;
   transform: translateX(-#{$aside});
   transition: all .3s ease;
   box-shadow: 2px 2px 1px $grey-medium;
-
-  // @include respond(tab-port) {
-  //   width: $aside;
-  // }
-  @include at(1) {
-    width: $aside;
-  }
-  @include from(5) {
-    width: $aside;
+  
+  @include from(2) {
+    padding-top: 2rem;
+    transform: translateX(-#{$aside * 1.1});
+    width: $aside * 1.1;
   }
 
-  // @include respond(laptop) {
-  //   transform: translateX(0);
-  // }
   @include from(5) {
     transform: translateX(0);
   }
@@ -47,14 +40,36 @@
   }
 
   &__navigation {
-    margin-top: 3rem;
+    margin-top: 1.8rem;
+    
+    @include from(2) {
+      margin-top: 10%;
+    }
+
+    @include from(4) {
+      margin-top: 20%;
+    }
   }
 
   &__item {
-    margin-bottom: 1.8rem;
+    margin-bottom: 1.4rem;
+    
+    @include from(2) {
+      margin-bottom: 1.8rem;
+    }
+
+    @include from(4) {
+      margin-bottom: 2.1rem;
+    }
   
     p {
       margin-bottom: 1rem;
+    }
+
+    &--buttons {
+      padding: 1rem;
+      border: 2px solid $grey-medium;
+      border-radius: 5px;
     }
   }
 
@@ -62,7 +77,7 @@
     display: block;
 
     &:hover {
-      // color: darken($grey-dark, 25%);
+      color: darken($grey-dark, 25%);
     }
   }
 
@@ -72,6 +87,7 @@
 
   &__social-list {
     margin-top: 1rem;
+    margin-bottom: 1rem;
     display: flex;
     justify-content: center;
   }
@@ -81,7 +97,8 @@
   }
 
   &__created {
-    margin-top: 2.7rem;
+    margin-top: auto;
+    margin-bottom: 2%;
     font-size: .65rem;
     
     a {
@@ -102,10 +119,8 @@
     display: inline-block;
     cursor: pointer;
     z-index: 1000;
-    
-    @include from(1) {
-      right: -4rem;
-    }
+    right: -6rem;
+
     @include at(2) {
       right: -6rem;
     }
@@ -113,17 +128,11 @@
       right: -7rem;
     }
     @include at(4) {
-      right: -9rem;
+      right: -6rem;
     }
     @include from(5) {
       display: none;
     }
-    // @include respond(tab-port) {
-    //   right: -4rem;
-    // }
-    // @include respond(laptop) {
-    //   display: none;
-    // }
 
     &.open {
       right: -3rem;

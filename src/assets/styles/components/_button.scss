@@ -44,6 +44,11 @@
     color: white;
     box-shadow: 2px 2px 6px 1px $grey-dark;
 
+    @include from(2) {
+      padding: .5rem .75rem;
+      font-size: 1rem;
+    }
+
     &:hover {
       box-shadow: 2px 2px 12px 1px $grey-dark;
       color: $grey-light;

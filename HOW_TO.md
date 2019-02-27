@@ -1,5 +1,11 @@
 This guide is a template that contains steps to install the project, technologies used, folder structure, etc.
 ===================
+Recucing img size by changing its quality
+convert picture.jpg -sampling-factor 4:2:0 -strip -quality 65 -interlace JPEG -colorspace sRGB picture-compressed.jpg
+
+Reducing img size by changing its size
+magick picture.png -resize 85% picture-small.png
+===============
 
 #
 

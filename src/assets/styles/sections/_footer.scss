@@ -2,6 +2,10 @@
   background: $grey-dark;
   color: $grey-light;
   padding: 2rem 0;
+
+  @include at(1) {
+    padding-bottom: 3.5rem;
+  }
   
   a {
     color: $grey-light;

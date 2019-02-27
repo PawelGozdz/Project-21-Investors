@@ -7,18 +7,24 @@ html(lang='pl')
     //- Meta
     meta(charset='UTF-8')
     meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
-    meta(http-equiv='X-UA-Compatible', content='ie=edge')
-
-    //- meta(name='msapplication-TileColor', content='#0E0E0E')
-    //- meta(name='theme-color', content='#0E0E0E')
+    meta(http-equiv='x-ua-compatible', content='ie=edge')
+    meta(http-equiv='content-type', content='text/html; charset=utf-8')
+    meta(name='subject', content='Biuro nieruchomości, sprzedaż mieszkania, kupno mieszkania')
+    meta(name='Copyright', content='P.J. Investors')
+    meta(name='author', content='RWD Strony Internetowe')
+    meta(name='Designer', content='RWD Strony Internetowe')
+    meta(name='Geography', content='ul. Piękna 24/26A, 00-549 Warszawa')
+    meta(name='Language', content='Polish, Polski')
+    meta(name='Publisher', content='P.J. Investors, RWD Strony Internetowe')
+    meta(name='distribution', content='Global')
+    meta(name='zipcode', content='00-549')
+    meta(name='city', content='Warszawa')
+    meta(name='country', content='Polska, Poland')
+    meta(name='Classification', content='Biuro nieruchomości oferuje usługi w zakresie kupna nieruchomości, sprzedaży nieruchomości, oceny stanu technicznego, doradztwa, sprawdzanie legalności nieruchomości, przygotowanie mieszkania do sprzedaży, ustalanie warunków z nabywcami, organizacja umowy sprzedaży i przekazaniu lokalu, organizacja przeprowadzki.')
+    meta(name='Keywords', content='sprzedaż mieszkania, kupno mieszkania, doradztwo, ocena stanu technicznego, ekspertyzy techniczne, nadzory budowlane, biuro nieruchomości, nieruchomości Warszzawa, sprzedaż mieszkań Warszawa, kupno mieszkań Warszawa')
 
     //- SEO
-
-    //- Basic Seo
-    block basicSeo
-      meta(name='description' content='Index page')
-      meta(name='keywords', content='index, page')
-      meta(name='author' content='')
+    block SEO
 
     //- Twitter
     //- meta(name='twitter:card', content='summary')
@@ -40,32 +46,56 @@ html(lang='pl')
     //- link(rel='icon', type='image/png', sizes='16x16', href=require('images/favicons/favicon-16x16.png'))
     //- link(rel='shortcut icon', href=require('images/favicons/favicon.ico'))
 
-    //- Preload fonts
-    //- link(type='font/woff', href=require('./assets/fonts/Quicksand-Bold.woff'), rel='preload', as='font', crossorigin)
-    //- link(type='font/woff', href=require('./assets/fonts/Quicksand-Medium.woff'), rel='preload', as='font', crossorigin)
-    //- link(type='font/woff', href=require('./assets/fonts/Quicksand-Regular.woff'), rel='preload', as='font', crossorigin)
-    //- link(type='font/woff', href=require('./assets/fonts/Quicksand-Light.woff'), rel='preload', as='font', crossorigin)
 
     link(href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet")
     link(href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet")
     link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.7.2/css/all.css', integrity='sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr', crossorigin='anonymous')
 
+    script(type='application/ld+json').
+      {
+      "@context": "http://schema.org",
+      "@type": "RealEstateAgent",
+      "name": "P.J Investors",
+      "image": "http://pjinvestors.pl/assets/images/logo.png",
+      "@id": "",
+      "url": "http://pjinvestors.pl",
+      "telephone": "600 076 635",
+      "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "ul. Piękna 24/26A",
+      "addressLocality": "Warszawa",
+      "postalCode": "00-549",
+      "addressCountry": "PL"
+      },
+      "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 52.223652,
+      "longitude": 21.01833211
+      },
+      "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+      ],
+      "opens": "08:00",
+      "closes": "22:00"
+      }
+      }
 
     //- Title
     block title
       title Your project!
 
-    //- Manifest browserconfig files
-    block manifestBrowserconfigFiles
-      //- link(rel='manifest', href='./manifest.json')
-      //- meta(name='msapplication-config' content='./browserconfig.xml')
-
   body
 
     //- block content
     block content
-      mixin active(page)
-        p= page
 
     //- block scripts
     block scripts
