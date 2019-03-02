@@ -52,10 +52,10 @@
   }
 
   &__item {
-    margin-bottom: 1.4rem;
+    margin-bottom: 1.2rem;
     
     @include from(2) {
-      margin-bottom: 1.8rem;
+      margin-bottom: 1.6rem;
     }
 
     @include from(4) {
@@ -63,13 +63,21 @@
     }
   
     p {
-      margin-bottom: 1rem;
+      margin-bottom: .5rem;
+      
+      @include from(2) {
+        margin-bottom: 1rem;
+      }
     }
 
     &--buttons {
-      padding: 1rem;
+      padding: .65rem 1rem;
       border: 2px solid $grey-medium;
       border-radius: 5px;
+      
+      @include from(2) {
+        padding: 1rem;
+      }
     }
   }
 

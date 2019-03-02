@@ -43,7 +43,6 @@
       
       @include from(4) {
         margin-bottom: 5rem;
-
       }
     }
   }
@@ -86,7 +85,6 @@
     color: $blue-light;
     text-shadow: 2px 2px 2px $grey-medium;
     margin-right: 1rem;
-
 
     &:hover {
       color: lighten($blue-light, 10%);

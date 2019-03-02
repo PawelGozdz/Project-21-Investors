@@ -99,7 +99,6 @@
       @include from(3) {
         width: 75%;
         margin-right: 0;
-
       }
       
       &:hover {
@@ -113,7 +112,6 @@
       display: inline-block;
       margin-bottom: 1rem;
     }
-
     
     ul li {
       margin-bottom: .5rem;
@@ -154,7 +152,6 @@
     color: $blue-light;
     text-shadow: 2px 2px 2px $grey-medium;
     margin-right: 1rem;
-
 
     &:hover {
       color: lighten($blue-light, 10%);

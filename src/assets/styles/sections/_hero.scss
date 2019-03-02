@@ -4,10 +4,6 @@
   background-position: center center;
   background-position: cover;
   
-  // @include from(5) {
-  //   background-position: cover;
-  // }
-  
   &--index {
     background-image:  linear-gradient(90deg, lighten($grey-dark, 65%), rgba($grey-light, .5)), url('../images/mieszkanie-białe-male.jpg');
     
@@ -84,5 +80,4 @@
   .button {
     color: $blue-light;
   }
-
 }

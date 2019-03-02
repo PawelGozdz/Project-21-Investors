@@ -1,0 +1,8 @@
+RewriteEngine On
+## Przekierowywanie www.rwd... na nie www.rwd##
+RewriteCond %{HTTP_HOST} ^www.pjinvestors.pl
+RewriteRule (.*) http://pjinvestors.pl/$1 [R=301,L]
+## Usuwanie .html z linkow ##
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+

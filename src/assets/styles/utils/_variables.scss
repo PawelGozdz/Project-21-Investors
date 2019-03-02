@@ -26,27 +26,17 @@ $slicer-breakpoints: 0 36em 48em 65em 90em !default;
 $slicer-breakpoint-names: () !default;
 $slicer-anti-overlap-corrections: 1px !default;
 
-  // $phone: 0;
-  // $tab-port: 36em;
-  // $tab-land: 48em;
-  // $laptop: 65em;
-  // $big-desktop: 75em;
-
-
 // TYPOGRAPHY
 
 h1 {
   font-family: $font-secondary;
-  // font-size: 4rem;
   font-weight: 300;
 }
 
 h2 {
-  // font-size: 3rem;
   font-weight: 300;
 }
 
 h3 {
-  // font-size: 2.8rem;
   font-weight: 300;
 }
