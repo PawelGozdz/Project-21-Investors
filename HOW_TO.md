@@ -9,10 +9,7 @@ magick picture.png -resize 85% picture-small.png
 
 ********
 assets issue
-Some links dont work, as there is no "." before "/assets". The "." needs to be put manually.
-    css link
-    script links at the bottom
-In sub-folder index.html, that needs to be "../assets" for the above 3.
+
 
 I css file, bg-image url need './assets/' needs to be removed and replaced to start with '../'
 
