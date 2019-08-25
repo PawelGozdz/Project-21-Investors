@@ -3,6 +3,13 @@
 doctype html
 html(lang='pl')
   head
+    // Global site tag (gtag.js) - Google Analytics
+    script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-112921134-4')
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-112921134-4');
 
     //- Meta
     meta(charset='UTF-8')

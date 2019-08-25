@@ -11,14 +11,12 @@ magick picture.png -resize 85% picture-small.png
 assets issue
 
 
-I css file, bg-image url need './assets/' needs to be removed and replaced to start with '../'
-
-#
+In css file, bg-image url need './assets/' needs to be removed and replaced to start with '../'
+ctrl+f and search for './assets'. Find all 24 records and replace them with '../'. That's it!
+# 
 
 #### <a id="routes">Routes/pages of the website</a>
 
-* `/`: Page to show the home or main page
-* `/blog`: Page for blog
 * `/contact`: Page for contact
 
 #
@@ -30,10 +28,8 @@ I css file, bg-image url need './assets/' needs to be removed and replaced to st
 
 #### Dependencies
 
-* Git https://git-scm.com/downloads
 * NodeJS >= 6 https://nodejs.org
   * *In order to run the project in your local machine, you must install NodeJS. You can download the executable file for your Operating System from their website and install it.*
-* Yarn: `brew install yarn` or follow the specific guide for your OS https://yarnpkg.com/lang/en/docs/install/
 
 #
 # 
@@ -41,7 +37,7 @@ I css file, bg-image url need './assets/' needs to be removed and replaced to st
 
 #### Dependencies
 
-* Webpack and webpack dev server: Install them with `yarn global add webpack webpack-dev-server`
+* Webpack and webpack dev server: Install them with `npm install  webpack webpack-dev-server`
 
 #### Branches
 * `master` main branch, used for production.
@@ -51,13 +47,12 @@ I css file, bg-image url need './assets/' needs to be removed and replaced to st
 ###### Omit the Cloning step if you already have the code in your computer
 ##### Cloning  (new folder/computer)
 
-1. Clone the `master` branch of the repository first `git clone git@github.com:my-user/my-repo.git`
+1. Clone the `master` branch of the repository first `git clone https://github.com/PawelGozdz/Project-21-Investors.git`
 
 ##### Developing
-2. Open the folder `my-repo` in your code editor because that one contains the source code.
-3. Start the `development server` of the project with `yarn run dev` (if you want to test the development server in your local network, you should run `yarn run dev-network` instead and with the IP of your host computer, you can access to the website in your other devices)
-5. Check the available [routes](#routes) of your website.
-6. Perform all the modifications you need
+1. Start the `development server` of the project with `npm run dev` (if you want to test the development server in your local network, you should run `npm run dev-network` instead and with the IP of your host computer, you can access to the website in your other devices)
+2. Check the available [routes](#routes) of your website.
+3. Perform all the modifications you need
 
 
 ##### Compiling to production
@@ -88,13 +83,13 @@ I css file, bg-image url need './assets/' needs to be removed and replaced to st
   * `assets`: All the images, icons, static js files and the fonts needed to run the site. Any new assets must be placed here.
   * `files`: Contain the PDFs of the guides.
   * `styles`: All the CSS(SASS) styles separated into folders to have a modular structure.
-  * `views`: You can create more pages in this folder using JADE (.jade) instead of writing pure HTML.
+  * `views`: You can create more pages in this folder using PUG (.pug) instead of writing pure HTML.
     * `guides`: The JADE file for each guide page, you can add more guides in this place or edit their content of the current ones.
     * `layouts`: The main template files which contain your header and your footer used for all the guides. This is very useful to avoid putting the same header and footer in each guide, or webpage.
     * `mixins`: Pieces of JADE files that are used for the same purpose of the layouts, which is to avoid repeat code in each guide template and instead use a mixing to place the same menu, share bar, page title, etc. just passing an attribute for each one.
 * `.editorconfig`: Used to set a configuration for your editor code, like use spaces instead tabs, the charset, of the files, etc.
 * `.gitignore`: Here is where you can set which files/folders shouldn't be tracked by `git`, that means, the file/folder written in this file will not be pushed to the repository such as `node_modules` and `dist` folder.
-* `package.json`: When you run the command `yarn install`, the packages installed are the ones listed in this file with the version that were installed, if you need to add more packages you can do it runing the command `yarn add package_name --save ` then a new package will be installed in the `node_modules` folder and the `package.json` will be updated with a new line of the package added.
+* `package.json`: When you run the command `npm install`, the packages installed are the ones listed in this file with the version that were installed, if you need to add more packages you can do it runing the command `npm install package_name --save ` then a new package will be installed in the `node_modules` folder and the `package.json` will be updated with a new line of the package added.
 * `webpack.config.js`: This is one of the most important files because it's the one that builds the production package and also the development environment, compiling the SASS and Jade files into HTML and CSS code. It also minifies all the files.
 
 

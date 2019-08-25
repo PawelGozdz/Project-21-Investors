@@ -7,11 +7,9 @@ section.sprzedaj#sprzedaj
           h3.hideme Napisz do Nas
           span.sprzedaj__divider
         .sprzedaj__form.hideme
-          form
-            input(type="text", id="imie", placeholder="Imię")
+          #result
+          form#contactForm
+            input(type="text", id="name", placeholder="Imię")
             input(type="text", id="email", placeholder="Email")
-            textarea(id="tekst", name="tekst", cols="30", rows="5", placeholder="Wiadomość")
-            button(type="submit").button.button__action Wyślij
-          
-        
-        
+            textarea(id="comment", name="comment", cols="30", rows="5", placeholder="Wiadomość")
+            button(type="submit", id="submit").button.button__action Wyślij

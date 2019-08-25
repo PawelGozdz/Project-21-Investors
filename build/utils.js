@@ -29,13 +29,13 @@ exports.pages = function (env, folder = '') {
 
     // console.log('options', options);
 
-    if (env === 'development') {
-      options.minify = {
-        removeComments: true,
-        // collapseWhitespace: true,
-        removeAttributeQuotes: true
-      };
-    }
+    // if (env === 'development') {
+    //   options.minify = {
+    //     removeComments: true,
+    //     // collapseWhitespace: true,
+    //     removeAttributeQuotes: true
+    //   };
+    // }
 
     pages.push(new HtmlWebpackPlugin(options));
   })

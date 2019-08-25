@@ -103,8 +103,7 @@ input:target,
 input:focus,
 textarea:active,
 textarea:target,
-textarea:focus,
- {
+textarea:focus {
   outline-color: $blue-light;
 }
 

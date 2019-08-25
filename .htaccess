@@ -8,7 +8,7 @@ Header set Cache-Control "max-age=2628000, public"
 </filesMatch>
 
 RewriteEngine On
-## Przekierowywanie www.rwd... na nie www.rwd##
+## Przekierowywanie www.... na nie www.##
 RewriteCond %{HTTP_HOST} ^www.pjinvestors.pl
 RewriteRule (.*) http://pjinvestors.pl/$1 [R=301,L]
 ## Usuwanie .html z linkow ##

@@ -105,6 +105,15 @@ module.exports = env => {
           }
         },
         {
+          test: /\.(php)(\?.*)?$/,
+          loader: 'url-loader',
+          options: {
+            // limit: 5000,
+            name: './assets/php/[name].[ext]'
+            // name: 'assets/fonts/[name].[hash:7].[ext]'
+          }
+        },
+        {
           test: /\.(mp4)(\?.*)?$/,
           loader: 'url-loader',
           options: {

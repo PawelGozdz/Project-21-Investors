@@ -4,4 +4,6 @@ node_modules
 dist
 docs
 images2
+distOLD
 manifest.json
+src/assets/images
